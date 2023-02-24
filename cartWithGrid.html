@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script type="text/javascript" src="cart.js"></script>
+	<title>cart and grid</title>
+</head>
+<body>
+
+<style type="text/css">
+	*{
+		position: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+
+/* for making grid */
+	.container{
+		margin: 50px auto;
+		border: 2px solid black;
+		width: 75%;
+		height: 75%;
+		background: #ecf0f1;
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-template-rows:repeat(2,300px);
+		grid-gap: 20px;
+		box-shadow:5px 5px 20px 5px black;
+         
+
+	}
+.box1{
+box-shadow:5px 5px 20px 5px white;
+}
+.box2{
+	margin-top: 30px;
+box-shadow:5px 5px 20px 5px white;
+
+
+}
+.box3{
+      
+box-shadow:5px 5px 20px 5px white;
+           	}
+.box4{
+           
+      box-shadow:5px 5px 20px 5px white;
+           }
+.box5{
+           box-shadow:5px 5px 20px 5px white;
+           }
+.box6{
+           
+box-shadow:5px 5px 20px 5px white;
+           }
+
+.box7{
+           	grid-column: 3/5;
+box-shadow:5px 5px 20px 5px white;
+}
+.imported{
+	display: flex;
+	justify-content: space-between;
+	margin-top:30px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+#click-button:hover{
+background: blue;
+color: white;
+}
+
+</style>
+
+<!-- first input and button -->
+<div class="container">
+	<div class="box1"><img src="shirt1.jpg"
+		style="box-shadow:5px 5px 10px 2px black" width="100%" height="100%"></div>
+	<div class="box2">
+		<button id="inc" onclick="incriment('data','totalCoast','totalSum','total')">+</button>
+		<input type="text" name="" value="0" id="data"><button id="dic" onclick="decriment('data','totalCoast','totalSum','total')">-</button>
+		<div class="imported">
+		<div style="width:50" >
+		<h3>IMPORTIED SHIRT IS ONLY </h3>
+		<p>from pancha prodection</p>
+	</div>
+	<div style="margin-top:20px;color:red;font-size:40px " >
+		<b>$</b><span>15</span>
+	</div>
+	</div>
+	<br><hr><br><hr>
+	<div class="imported">	
+		<h3>TOTAL COAST</h3>
+	<div  style="color: red;font-size:40px " >$<span id="totalCoast">0.00</span></div>
+	</div>
+	</div>
+	<!--total coat-->
+	<div class="box3">
+		<div class="imported">
+		<h3>TOTAL SUM</h3>
+		
+		<div style="color:red;font-size:40px">$<span id="totalSum">0.00</span></div>
+     </div>
+     <div class="imported">
+	<h3>Servise charges</h3>
+	<div style="color:red;font-size:40px;">
+	$ 5
+</div>
+	
+	</div>
+<div class="imported">
+	<h3>TOTAL</h3>
+	<div style="color:red;font-size:40px;">
+	$ <span id="total">0.00</span>
+</div>
+	
+	</div>
+
+</div>
+	<div class="box4">box4</div>
+	<div class="box5"><img src="shirt2.jpeg"
+		style="box-shadow:5px 5px 10px 2px black" width="100%" height="100%"></div>
+	<div class="box6">
+		<div class="box2">
+		<button id="inc" onclick="incriment('data1', 'totalCoast1','totalSum','total')">+</button>
+		<input type="text" name="" value="0" id="data1"><button id="dic" onclick="decriment('data1','totalCoast1','totalSum','total')">-</button>
+		<div class="imported">
+		<div style="width:50" >
+		<h3>IMPORTIED SHIRT IS ONLY </h3>
+		<p>from pancha prodection</p>
+	</div>
+	<div style="margin-top:20px;color:red;font-size:40px " >
+		<b>$</b><span>15</span>
+	</div>
+	</div>
+	<br><hr><br><hr>
+	<div class="imported">	
+		<h3>TOTAL COAST</h3>
+	<div style="color: red;font-size:40px ">$<span id="totalCoast1">0.00</span></div>
+	</div>
+
+	</div>
+	
+	</div>
+	 
+<!--toggel with jquiry Last postion-->
+
+	 <div class="box7">
+
+<marquee behavior="alternate">
+	 	<h2 style="background:blue;color: white;text-align: center;">CHANS FOR EVERYONE</h2>
+	
+	</marquee>
+	<!-- <p id="pera"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+	<div id="pera">
+
+		<h3>Plese write any number for discunt</h3>
+	<p>number 0 between 3</p>
+	<br><br>
+	<div id="jastify"style="display:flex;justify-content: space-between;margin-left: 40px;margin-right: 40px">
+	<div id="number"></div>
+	<div id="random"></div>
+	</div>
+	<h2 id="result"></h2>
+	
+	<input type="text" name="" id="dataInput">
+	<button id="btn" onclick="dataNumber()">discunt</button>
+    </div>
+
+	<input type="button"  id="click-button" value="hide" style="width:200px;height:50px;margin-left:100px;margin-top:10px">
+
+
+</div>
+</div>
+<script type="text/javascript">
+	
+//function dataclick(){
+	//alert("alert is js");
+//}
+
+
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+      var visible = true;
+       $('#click-button').on('click' , function(){
+       	
+       	if (visible) {
+       		$('#pera').slideUp(2000);
+       		 visible = false;
+       		 $(this).val('show');
+       	}else{
+       		$('#pera').slideDown(2000);
+       		 visible = true;
+       		 $(this).val('hide');
+       	}
+
+
+		})
+
+	});
+</script> 
+</body>
+</html>
